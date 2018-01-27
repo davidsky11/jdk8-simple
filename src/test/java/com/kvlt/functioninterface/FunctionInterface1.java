@@ -4,7 +4,12 @@ import org.junit.Test;
 
 /**
  * FunctionInterface1
- *
+ *  FunctionalInterface注解有哪些（常用）：
+ *      Predicate
+ *      Function
+ *      Supplier
+ *      Consumer
+ *      Comparator
  * @author KVLT
  * @date 2018-01-27.
  */

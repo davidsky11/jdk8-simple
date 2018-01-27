@@ -1,12 +1,11 @@
 package com.kvlt.functioninterface;
 
+import com.google.common.collect.Maps;
 import com.kvlt.entity.Person;
 import org.junit.Test;
 
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
+import java.util.HashMap;
+import java.util.function.*;
 
 /**
  * FunctionInterfaceBuiltin
@@ -43,8 +42,29 @@ public class FunctionInterfaceBuiltin {
         Supplier<Person> supplier = Person::new;
         System.out.println(supplier.get());
 
-        // 消费
+        // 消费 不返回
         Consumer<Person> consumer = p -> System.out.println("Hello, " + p.getName());
         consumer.accept(new Person(1L, "tet", 12));
+
+        BiConsumer<String, Integer> printKeyAndValue = (key, value) -> System.out.println(key + "\t" + value);
+        printKeyAndValue.accept("one", 1);
+
+        HashMap map = Maps.newHashMap();
+        map.put("you", 12);
+        map.put("me", 11);
+        map.forEach(printKeyAndValue);
+
+        System.out.println(map.getOrDefault("three", 3));
+    }
+
+    @Test
+    public void runnable() {
+        Runnable r1 = () -> System.out.println("hello");
+        r1.run();
+    }
+
+    @Test
+    public void callable() {
+
     }
 }
