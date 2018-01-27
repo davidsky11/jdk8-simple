@@ -6,9 +6,10 @@ import org.junit.After;
 import org.junit.Test;
 
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+
+import static java.util.Comparator.comparing;
 
 /**
  * LambdaDemo1
@@ -37,15 +38,13 @@ public class LambdaDemo1 {
 
     @Test
     public void simple1() {
-        Comparator<Person> byAge =
-                (Person p1, Person p2) -> p1.getAge().compareTo(p2.getAge());
-//        Comparator<Person> byName =
-//                Comparator.comparing();
+//        beanLs.sort(comparing(p -> p.getName()));
+        beanLs.sort(comparing(Person::getName).reversed().thenComparing(Person::getAge));
     }
 
     @Test
     public void simple2() {
-
+        beanLs.sort((p1, p2) -> p1.getAge().compareTo(p2.getAge()));
     }
 
     @Test
