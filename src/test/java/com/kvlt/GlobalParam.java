@@ -1,4 +1,4 @@
-package com.kvlt.lambda;
+package com.kvlt;
 
 import com.google.common.collect.Lists;
 import com.kvlt.entity.Person;

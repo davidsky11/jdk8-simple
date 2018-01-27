@@ -8,9 +8,9 @@ package com.kvlt.entity;
  */
 public class Person {
 
-    private Long id;
-    private String name;
-    private Integer age;
+    private Long id = 0L;
+    private String name = "default";
+    private Integer age = 0;
 
     public Person() {}
 

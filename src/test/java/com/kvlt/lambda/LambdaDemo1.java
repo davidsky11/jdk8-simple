@@ -1,5 +1,6 @@
 package com.kvlt.lambda;
 
+import com.kvlt.GlobalParam;
 import com.kvlt.entity.Person;
 import org.junit.After;
 import org.junit.Test;
