@@ -11,13 +11,31 @@ public class Person {
     private Long id = 0L;
     private String name = "default";
     private Integer age = 0;
+    private String sex;
 
     public Person() {}
+
+    public Person(String name, Integer age) {
+        this.name = name;
+        this.age = age;
+    }
 
     public Person(Long id, String name, Integer age) {
         this.id = id;
         this.name = name;
         this.age = age;
+    }
+
+    public Person(Long id, String name, String sex) {
+        this.id = id;
+        this.name = name;
+        this.sex = sex;
+    }
+
+    public Person(String name, Integer age, String sex) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
     }
 
     public Long getId() {
@@ -42,6 +60,14 @@ public class Person {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
     }
 
     @Override
