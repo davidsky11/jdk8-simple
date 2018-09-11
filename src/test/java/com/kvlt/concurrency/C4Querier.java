@@ -57,7 +57,7 @@ public class C4Querier extends UntypedAbstractActor {
 
     public static void main(String[] args) {
         /*ActorSystem system = ActorSystem.create("getFirstResult");
-        final ActorRef toString = system.actorOf(Props.create(C4Querier.class), "first");
+        finalDemo ActorRef toString = system.actorOf(Props.create(C4Querier.class), "first");
         for (int i=0; i<100; i++) {
             toString.tell("test" + i, toString);
         }*/

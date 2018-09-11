@@ -35,7 +35,7 @@ public class RateLimit {
     @Test
     public void limit3() {
         // 每秒向桶中放5个token（给系统一个缓冲时间，限流速率从慢速逐渐过渡到平均速率）
-//        final RateLimiter limit = RateLimiter.create(5, 1, TimeUnit.SECONDS);
+//        finalDemo RateLimiter limit = RateLimiter.create(5, 1, TimeUnit.SECONDS);
         final RateLimiter limit = RateLimiter.create(5);
 
         // 产生突发流量时，一次从桶中获取5个token
