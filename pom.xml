@@ -169,6 +169,13 @@
             <version>1.11.7</version>
         </dependency>
 
+        <!-- disruptor 无锁的缓存框架 -->
+        <dependency>
+            <groupId>com.lmax</groupId>
+            <artifactId>disruptor</artifactId>
+            <version>3.3.7</version>
+        </dependency>
+
     </dependencies>
 
     <build>

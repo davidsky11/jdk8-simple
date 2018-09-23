@@ -15,7 +15,7 @@ public class InvokePerformanceTest {
 
     public static int sCount;
 
-    // static method
+    // staticModel method
     public static void increaseStatic() {
         sCount++;
     }
@@ -89,7 +89,7 @@ public class InvokePerformanceTest {
         }
         end = System.currentTimeMillis();
         gap = end - start;
-        System.out.println("\nstatic direct call: " + gap); // call static method directly
+        System.out.println("\nstaticModel direct call: " + gap); // call staticModel method directly
 
         mh = test.getIncreaseHandler(test, "increaseStatic", true);
         start = System.currentTimeMillis();
@@ -98,7 +98,7 @@ public class InvokePerformanceTest {
         }
         end = System.currentTimeMillis();
         gap = end - start;
-        System.out.println("static method handler : " + gap); // call static method by handler
+        System.out.println("staticModel method handler : " + gap); // call staticModel method by handler
 
         method = test.getIncreaseMethod(test, "increaseStatic", true);
         start = System.currentTimeMillis();
@@ -107,6 +107,6 @@ public class InvokePerformanceTest {
         }
         end = System.currentTimeMillis();
         gap = end - start;
-        System.out.println("static method invoke: " + gap); // call static method by invocation
+        System.out.println("staticModel method invoke: " + gap); // call staticModel method by invocation
     }
 }
